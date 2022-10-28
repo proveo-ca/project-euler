@@ -23,14 +23,14 @@ function mathSum3or5 (n) {
   }
 
   // Below 1000 is 999
-  let y = n - 1
+  const y = n - 1
   // let y be 999 and k be the multiples 3 and 5, taking 15 into account as an intersection.
   // 1. y / k will output the amount of multiples for that number e.g. 999 / 3 = 333 multiples of 3
   // 2. We use the above summation identity to see the total sum of 1...333
   // 3. We multiply the total sum by the multiple, to get the real value of the multiples back
   // 4. We remove the intersection of 15
-  const sum = summation(Math.floor(y / 3)) * 3
-    + summation(Math.floor(y / 5)) * 5 - summation(Math.floor(y / 15)) * 15
+  const sum = summation(Math.floor(y / 3)) * 3 +
+    summation(Math.floor(y / 5)) * 5 - summation(Math.floor(y / 15)) * 15
 
   console.log('001: Mathematical O(1) solution - ', sum)
 

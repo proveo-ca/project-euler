@@ -4,7 +4,7 @@
 
 function naiveSumEvenFibonacci (limit) {
   let sum = 2
-  let numbers = [1, 2]
+  const numbers = [1, 2]
   let result = numbers[0] + numbers[1]
 
   while (result <= limit) {

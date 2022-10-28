@@ -22,7 +22,6 @@ function bruteForceLargestPrimeFactor (n) {
 
     n /= factor
     factors.push(factor)
-    console.log('FACTORS: ', factors)
   }
 
   const largestPrime = factors.pop()

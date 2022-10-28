@@ -6,9 +6,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
+    "lint": "standard .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Roberto von Schoettler <rschoettler@proveo.ca>",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "standard": "^17.0.0"
+  }
 }

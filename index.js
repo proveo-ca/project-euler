@@ -1,17 +1,17 @@
 import { performance, PerformanceObserver } from 'node:perf_hooks'
 import path from 'node:path'
 
-async function run() {
-  let answers, i = 1
+async function run () {
+  let answers; let i = 1
   const exercises = []
   do {
     const dirname = path.join(
       path.resolve(),
-      `./exercise-${String(i).padStart(3, '0')}/index.js`,
+      `./exercise-${String(i).padStart(3, '0')}/index.js`
     )
     try {
       answers = await import(dirname)
-      if (answers.default.hasOwnProperty('solutions')) {
+      if (Object.prototype.hasOwnProperty.call(answers.default, 'solutions')) {
         exercises.push(answers.default)
       }
     } catch (e) {
@@ -29,11 +29,11 @@ async function run() {
     })
   })
 
-// perfObserver.observe({ entryTypes: ['measure'], buffered: true })
-// performance.mark('test - begin')
-// console.log('performance measure test!)
-// performance.mark('test - end')
-// performance.measure('performance test', 'test - begin', 'test - end')
+  // perfObserver.observe({ entryTypes: ['measure'], buffered: true })
+  // performance.mark('test - begin')
+  // console.log('performance measure test!)
+  // performance.mark('test - end')
+  // performance.measure('performance test', 'test - begin', 'test - end')
 
   perfObserver.observe({ entryTypes: ['function'] })
   exercises.forEach(({ solutions, input }) => {
@@ -45,4 +45,3 @@ async function run() {
 }
 
 run()
-
