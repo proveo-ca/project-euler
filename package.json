@@ -1,0 +1,14 @@
+{
+  "name": "project-euler",
+  "version": "1.0.0",
+  "description": "A deep dive into mathematics; different approaches and performances for Project Euler problems",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Roberto von Schoettler <rschoettler@proveo.ca>",
+  "license": "UNLICENSED"
+}
