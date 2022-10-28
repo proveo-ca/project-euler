@@ -30,10 +30,10 @@ async function run() {
   })
 
 // perfObserver.observe({ entryTypes: ['measure'], buffered: true })
-// performance.mark('exercise-001 exercise - begin')
-// first.doThing()
-// performance.mark('exercise-001 exercise - end')
-// performance.measure('exercise-001 exercise', 'exercise-001 exercise - begin', 'exercise-001 exercise - end')
+// performance.mark('test - begin')
+// console.log('performance measure test!)
+// performance.mark('test - end')
+// performance.measure('performance test', 'test - begin', 'test - end')
 
   perfObserver.observe({ entryTypes: ['function'] })
   exercises.forEach(({ solutions, input }) => {
