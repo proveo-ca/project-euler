@@ -59,6 +59,14 @@ function naiveSmallestMultiple (n) {
 }
 
 // From: https://github.com/CodeFay/ProjectEuler100/blob/master/Problems%201-25/solution_005.js
+// A more efficient approach, is calculating the lowest common multiple between the cumulative lcm, and the next number:
+// initial value = 2 (lowest factor)
+// lcm(2, 10) = 10
+// lcm(10, 9) = 90
+// lcm(90, 8) = 360
+// lcm(360, 7) = 2520
+// lcm(2520, 6) = 2520
+// lcm(2520, 5) = 2520
 function mathematicalSmallestMultiple (n) {
   // Apply the Euclidean algorithm to find the Greatest Common Denominator
   function gcd (a, b) {
