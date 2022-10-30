@@ -1,0 +1,15 @@
+{
+  "naiveSum3or5": "001: Naive O(n) solution",
+  "mathSum3or5": "001: Mathematical O(1) solution",
+  "naiveSumEvenFibonacci": "002: Naive sum-even fibonacci approach",
+  "trampolineSumEvenFibonacci": "002: Trampoline sum-even fibonacci approach",
+  "bruteForceLargestPrimeFactor": "003: Brute force largest prime factor",
+  "simpleBruteForceLargestPrimeFactor": "003: Simple brute force largest prime factor",
+  "mathLargestPrimeFactor": "003: Mathematical largest prime factor",
+  "naiveLargestPalindromeProduct": "004: Naive O(n^2) largest palindrome product",
+  "mathLargestPalindromeProduct": "004: Mathematical O(n / 11) * O(n)) largest palindrome product",
+  "naiveSmallestMultiple": "005: Naive smallest multiple from the product of all numbers in between 20 to 1",
+  "mathSmallestMultiple": "005: Mathematical smallest multiple from the product of all numbers in between 20 to 1",
+  "naiveSumSquareDifference": "006: Naive difference between sums of the squares and square of the sum",
+  "mathSumSquareDifference": "006: Mathematical difference between sums of the squares and square of the sum"
+}

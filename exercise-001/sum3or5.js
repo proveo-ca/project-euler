@@ -10,7 +10,6 @@ function naiveSum3or5 (n) {
       sum += n
     }
   }
-  console.log('001: Naive O(n) solution - ', sum)
 
   return sum
 }
@@ -29,12 +28,8 @@ function mathSum3or5 (n) {
   // 2. We use the above summation identity to see the total sum of 1...333
   // 3. We multiply the total sum by the multiple, to get the real value of the multiples back
   // 4. We remove the intersection of 15
-  const sum = summation(Math.floor(y / 3)) * 3 +
+  return summation(Math.floor(y / 3)) * 3 +
     summation(Math.floor(y / 5)) * 5 - summation(Math.floor(y / 15)) * 15
-
-  console.log('001: Mathematical O(1) solution - ', sum)
-
-  return sum
 }
 
 export default [naiveSum3or5, mathSum3or5]

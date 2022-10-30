@@ -24,8 +24,7 @@ function bruteForceLargestPrimeFactor (n) {
     factors.push(factor)
   }
 
-  const largestPrime = factors.pop()
-  console.log('003: Brute force largest prime factor - ', largestPrime)
+  return factors.pop()
 }
 
 // From: https://github.com/miloss/project-euler-javascript/blob/master/003.js
@@ -45,9 +44,7 @@ function simpleBruteForceLargestPrimeFactor (n) {
     }
   }
 
-  const largestPrime = factors.pop()
-  console.log('003: Simple brute force largest prime factor - ', largestPrime)
-  return largestPrime
+  return factors.pop()
 }
 
 // From: https://github.com/CodeFay/ProjectEuler100/blob/master/Problems%201-25/solution_003.js
@@ -85,7 +82,6 @@ function mathLargestPrimeFactor (number) {
     if (number % i === 0) {
       // if factor, then check if prime
       if (checkPrime(i)) {
-        console.log('003: Mathematical largest prime factor - ', i)
 
         return i
       }

@@ -52,10 +52,8 @@ function naiveSmallestMultiple (n) {
 
   const min = 2
   const numbers = new Array(n - (min - 1)).fill(min).map((n, i) => n + i)
-  const smallestMultiple = getLCM(numbers)
 
-  console.log(`005: Naive smallest multiple from the product of all numbers in between ${n} to 1 - `, smallestMultiple)
-  return smallestMultiple
+  return getLCM(numbers)
 }
 
 // From: https://github.com/CodeFay/ProjectEuler100/blob/master/Problems%201-25/solution_005.js
@@ -67,7 +65,7 @@ function naiveSmallestMultiple (n) {
 // lcm(360, 7) = 2520
 // lcm(2520, 6) = 2520
 // lcm(2520, 5) = 2520
-function mathematicalSmallestMultiple (n) {
+function mathSmallestMultiple (n) {
   // Apply the Euclidean algorithm to find the Greatest Common Denominator
   function gcd (a, b) {
     if (a % b !== 0) {
@@ -87,8 +85,7 @@ function mathematicalSmallestMultiple (n) {
     val = lcm(val, i)
   }
 
-  console.log(`005: Mathematical smallest multiple from the product of all numbers in between ${n} to 1 - `, val)
   return val
 }
 
-export default [naiveSmallestMultiple, mathematicalSmallestMultiple]
+export default [naiveSmallestMultiple, mathSmallestMultiple]

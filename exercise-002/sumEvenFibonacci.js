@@ -15,7 +15,6 @@ function naiveSumEvenFibonacci (limit) {
     numbers[1] = result
     result = numbers[0] + numbers[1]
   }
-  console.log('002: Naive sum-even fibonacci approach - ', sum)
 
   return sum
 }
@@ -46,8 +45,6 @@ function trampolineSumEvenFibonacci (limit) {
     i++
     number = fibonacci(i)
   }
-
-  console.log('002: Trampoline sum-even fibonacci approach - ', sum)
 
   return sum
 }

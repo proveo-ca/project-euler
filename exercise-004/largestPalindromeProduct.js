@@ -40,13 +40,12 @@ function naiveLargestPalindromeProduct (n) {
     multiplicand -= 1
     multiplier = base
   }
-  console.log('004: Naive O(n^2) largest palindrome product - ', max)
 
   return max
 }
 
 // From: https://github.com/CodeFay/ProjectEuler100/blob/master/Problems%201-25/solution_004.js
-function mathematicalLargestPalindromeProduct (n) {
+function mathLargestPalindromeProduct (n) {
   function checkPalindrome (x) {
     // There a faster way to do this with Number theory (considering base 10), but I will submit this way for now.
     return x == parseInt(x.toString().split('').reverse().join(''))
@@ -74,9 +73,7 @@ function mathematicalLargestPalindromeProduct (n) {
     }
   }
 
-  console.log('004: Mathematical O(n / 11) * O(n)) largest palindrome product - ', init)
-
   return init
 }
 
-export default [naiveLargestPalindromeProduct, mathematicalLargestPalindromeProduct]
+export default [naiveLargestPalindromeProduct, mathLargestPalindromeProduct]
