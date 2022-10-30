@@ -8,7 +8,8 @@
 // Find the difference between the sum of the squares of the first one hundred natural numbers and
 // the square of the sum.
 
-// A naive approach would proceed as described:
+// A naive approach would be to iterate n to 1 to accumulate the squares, use 001's summation,
+// and return the difference:
 function naiveSumSquareDifference (n) {
   let squaresSum = 0
   let currentNumber = n
@@ -27,17 +28,17 @@ function naiveSumSquareDifference (n) {
 // From: https://github.com/CodeFay/ProjectEuler100/blob/master/Problems%201-25/solution_006.js
 function mathSumSquareDifference (n) {
   // Re-use summation function from Euler001
-  function summation(x) {
-    return (x+1)*(x/2)
+  function summation (x) {
+    return (x + 1) * (x / 2)
   }
 
-  function squareSum(x) {
-    return Math.pow(summation(x),2)
+  function squareSum (x) {
+    return Math.pow(summation(x), 2)
   }
 
 // Proved by induction; remembered this formula from my MathCounts days!
-  function sumSquare(x) {
-    return x * ( x + 1 ) * ( 2*x + 1 ) / 6
+  function sumSquare (x) {
+    return x * (x + 1) * (2 * x + 1) / 6
   }
 
   return squareSum(n) - sumSquare(n)

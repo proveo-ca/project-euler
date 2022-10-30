@@ -2,8 +2,8 @@
 // The sum of these multiples is 23.
 // Find the sum of all the multiples of 3 or 5 below 1000.
 
-// A naive approach can be to use mod 3 or 5, to exclude the intersection of 15,
-// To accumulate whichever numbers return mod 0
+// A naive approach can be to use mod 3 OR 5, to exclude the intersection of 15,
+// and accumulate whichever numbers return mod 0
 function naiveSum3or5 (n) {
   let sum = 0
   while (n > 0) {
