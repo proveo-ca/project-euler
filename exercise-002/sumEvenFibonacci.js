@@ -2,6 +2,8 @@
 // first 10 terms will be:  1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...  By considering the terms in the Fibonacci sequence
 // whose values do not exceed four million, find the sum of the even-valued terms.
 
+// A naive approach may be to keep track of the 2 terms, constantly replacing the first with the previous sum.
+// Accumulate the sum whenever an even number is found
 function naiveSumEvenFibonacci (limit) {
   let sum = 2
   const numbers = [1, 2]

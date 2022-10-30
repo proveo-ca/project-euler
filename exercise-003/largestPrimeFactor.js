@@ -1,5 +1,8 @@
 // The prime factors of 13195 are 5, 7, 13 and 29.
 // What is the largest prime factor of the number 600851475143 ?
+
+// A brute force approach can be iterating 2...n to find all factors of a number in an array,
+// and popping the last factor, given that the last factor is always the largest.
 function bruteForceLargestPrimeFactor (n) {
   const base = 1
   const factors = [base]
@@ -90,3 +93,5 @@ function mathLargestPrimeFactor (number) {
 }
 
 export default [bruteForceLargestPrimeFactor, simpleBruteForceLargestPrimeFactor, mathLargestPrimeFactor]
+
+// Further reading, Wilson's theorem: https://en.wikipedia.org/wiki/Wilson%27s_theorem
