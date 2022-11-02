@@ -1,4 +1,4 @@
-//A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is
+// A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is
 // 9009 = 91 × 99.
 // Find the largest palindrome made from the product of two 3-digit numbers.
 
@@ -59,9 +59,9 @@ function mathLargestPalindromeProduct (n) {
    * Number theory dictates that a palindrome product is divisible by 11, so start inner loop with largest multiple of 11 < maxNum
    */
 
-  let maxNum = Math.pow(10, n) - 1
-  let minNum = Math.pow(10, n - 1) - 1
-  let maxMult = Math.floor(maxNum / 11) * 11
+  const maxNum = Math.pow(10, n) - 1
+  const minNum = Math.pow(10, n - 1) - 1
+  const maxMult = Math.floor(maxNum / 11) * 11
 
   for (let i = maxMult; i > minNum; i -= 11) {
     for (let j = maxNum; j > minNum; j--) {

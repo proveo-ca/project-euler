@@ -11,5 +11,13 @@
   "naiveSmallestMultiple": "005: Naive smallest multiple from the product of all numbers in between 20 to 1",
   "mathSmallestMultiple": "005: Mathematical smallest multiple from the product of all numbers in between 20 to 1",
   "naiveSumSquareDifference": "006: Naive difference between sums of the squares and square of the sum",
-  "mathSumSquareDifference": "006: Mathematical difference between sums of the squares and square of the sum"
+  "mathSumSquareDifference": "006: Mathematical difference between sums of the squares and square of the sum",
+  "nthPrime": "007: Find the 10.001th prime inspired by Willan's Formula and Primality Test",
+  "simplerNthPrime": "007: Simpler brute force find the 10.001th prime",
+  "naiveLargestProduct": "008: Naive adjacent window panning for the largest product in 1000th digit number",
+  "simpleLargestProduct": "008: Character by character check for the largest product in 1000th digit number",
+  "noTrigonometryPythagoreanTriplet": "009: No trigonometry product of an a < b < c Pythagorean Triplet",
+  "bruteForcePythagoreanTriplet": "009: Brute force product of an an < b < c Pythagorean Triplet",
+  "primesSummation": "010: Primes summation using a brute force Prime tester and Primality Test (+6 increments)",
+  "simplerBruteForcePrimeSummation": "010: Primes summation using a brute force Prime tester and +2 increments"
 }

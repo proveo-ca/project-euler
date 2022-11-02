@@ -21,7 +21,6 @@ async function run () {
     }
   } while (answers)
 
-
   exercises.forEach(getPerformance)
 }
 

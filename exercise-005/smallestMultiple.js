@@ -39,8 +39,8 @@ function naiveSmallestMultiple (n) {
           ...replacerMap,
           ...!lcm[key] || factorMap[key] > lcm[key]
             ? { [key]: factorMap[key] }
-            : {},
-        }), {}),
+            : {}
+        }), {})
       }
     }, {})
 
@@ -75,7 +75,7 @@ function mathSmallestMultiple (n) {
     }
   }
 
-// Least Common Multiple formulas is LCM(a,b) = ab/GCD(a,b)
+  // Least Common Multiple formulas is LCM(a,b) = ab/GCD(a,b)
   function lcm (a, b) {
     return (a * b / gcd(a, b))
   }

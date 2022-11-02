@@ -36,7 +36,7 @@ function mathSumSquareDifference (n) {
     return Math.pow(summation(x), 2)
   }
 
-// Proved by induction; remembered this formula from my MathCounts days!
+  // Proved by induction; remembered this formula from my MathCounts days!
   function sumSquare (x) {
     return x * (x + 1) * (2 * x + 1) / 6
   }

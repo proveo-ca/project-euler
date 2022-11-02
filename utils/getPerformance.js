@@ -15,13 +15,18 @@ const perfObserver = new PerformanceObserver((items) => {
       durations.push(duration)
       console.log(detail.comment)
       console.log(`${Number(duration).toFixed(5)} ms`)
-      console.log(`Pass? ${detail.result === detail.expected ? '✅' : '⛔'}`)
+      console.log(`Result: ${detail.result} | Pass? ${detail.result === detail.expected ? '✅' : '⛔'}`)
     })
 
     const ascDurations = durations.sort((a, b) => a - b)
     const fastest = Number(ascDurations[0]).toFixed(5)
     const slowest = Number(ascDurations.at(-1)).toFixed(5)
-    console.log(`\nThe fastest function completed the exercise in ${fastest}ms.\nMore efficient by x${Number(slowest / fastest).toFixed(1)}\n`)
+    const relativeSpeed = Number(slowest / fastest)
+    if ((relativeSpeed * 10) < 11) {
+      console.log('The functions completed at about the same time!')
+    } else {
+      console.log(`\nThe fastest function completed the exercise in ${fastest}ms.\nMore efficient by x${relativeSpeed.toFixed(2)}\n`)
+    }
   })
 })
 perfObserver.observe({ entryTypes: ['measure'], buffered: true })

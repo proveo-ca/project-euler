@@ -85,7 +85,6 @@ function mathLargestPrimeFactor (number) {
     if (number % i === 0) {
       // if factor, then check if prime
       if (checkPrime(i)) {
-
         return i
       }
     }
