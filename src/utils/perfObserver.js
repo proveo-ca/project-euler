@@ -1,15 +1,35 @@
 import { performance, PerformanceObserver } from 'node:perf_hooks'
-import COMMENTS_MAP from './COMMENTS_MAP.json' assert {type: 'json'}
-// Designed to be imported only once, not bothering making it a Singleton
-const perfObserver = new PerformanceObserver((items) => {
+import COMMENTS_MAP from './COMMENTS_MAP.json' assert { type: 'json' }
+
+let instance, metrics
+
+async function getInstance () {
+  return new Promise((resolve) => {
+    if (!instance) {
+      instance = new PerformanceObserver((items) => {
+        this.metrics = items.getEntries().reduce((entryByExercise, entry) => {
+          console.log(entryByExercise)
+          const index = entry.detail.exercise - 1
+          entryByExercise[index] = entryByExercise[index]
+            ? [...entryByExercise[index], entry]
+            : [entry]
+          return entryByExercise
+        }, [])
+        console.log('METRICS: ', this.metrics)
+      })
+
+      instance.observe({ entryTypes: ['measure'], buffered: true })
+      return resolve({ instance, metrics })
+    } else {
+      return resolve({ instance, metrics })
+    }
+  })
+}
+
+function logPerformance (entries) {
   console.log('\n Performance entries: \n')
-  items.getEntries().reduce((entryByExercise, entry) => {
-    const index = entry.detail.exercise - 1
-    entryByExercise[index] = entryByExercise[index]
-      ? [...entryByExercise[index], entry]
-      : [entry]
-    return entryByExercise
-  }, []).forEach((entriesByExercise) => {
+
+  entries.map((entriesByExercise) => {
     const durations = []
     entriesByExercise.forEach(({ detail, duration }) => {
       durations.push(duration)
@@ -28,10 +48,9 @@ const perfObserver = new PerformanceObserver((items) => {
       console.log(`\nThe fastest function completed the exercise in ${fastest}ms.\nMore efficient by x${relativeSpeed.toFixed(2)}\n`)
     }
   })
-})
-perfObserver.observe({ entryTypes: ['measure'], buffered: true })
+}
 
-function getPerformance({ solutions, input, expected }, i) {
+function getPerformance ({ solutions, input, expected }, i) {
   solutions.forEach((fn) => {
     const startTag = `${fn.name} - start`
     const endTag = `${fn.name} - end`
@@ -47,11 +66,10 @@ function getPerformance({ solutions, input, expected }, i) {
         exercise: i + 1,
         input,
         result,
-        expected
-      }
+        expected,
+      },
     })
   })
-
 }
 
-export { getPerformance }
+export { getInstance, getPerformance, logPerformance }
