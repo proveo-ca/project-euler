@@ -1,5 +1,5 @@
 import path from 'node:path'
-import { getPerformance } from './utils/getPerformance.js'
+import { getInstance, getPerformance, logPerformance } from './src/utils/perfObserver.js'
 
 async function run () {
   let answers; let i = 1
@@ -21,7 +21,11 @@ async function run () {
     }
   } while (answers)
 
+  const { instance, metrics } = await getInstance()
   exercises.forEach(getPerformance)
+  console.log('INDEX INSTANCE: ', instance)
+  console.log('INDEX METRICS: ', metrics)
+  // logPerformance(metrics)
 }
 
 run()
