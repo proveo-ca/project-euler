@@ -1,6 +1,3 @@
-// The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
-// Find the sum of all the primes below two million.
-
 // For this, we could use exercise 003 to accumulate primes found:
 // From exercise 003
 function getIsPrime (p) {

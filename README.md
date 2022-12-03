@@ -7,7 +7,7 @@ A deep dive into mathematics; different approaches and performances for the prob
 ### To run: 
 -  `npm start`
 
-This will run all solutions stored in this repo, comparing them using node's [perf_hook](https://nodejs.org/api/perf_hooks.html).
+This will run _all_ solutions stored in this repo, comparing them using node's [perf_hook](https://nodejs.org/api/perf_hooks.html).
 
 ## About this repo
 Please, remember the purpose for [Project Euler](https://projecteuler.net/) is for you to attempt the problem first;

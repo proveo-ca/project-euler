@@ -1,6 +1,3 @@
-// 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
-// What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
-
 // A naive approach would be finding the lowest common multiple of n, then proceed all the way down to 2.
 // As per the lowest common multiple, only a single base with the biggest exponential remains, e.g.:
 // lcm(10) = 2 * 5
