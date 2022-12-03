@@ -2,9 +2,9 @@
 A deep dive into mathematics; different approaches and performances for the problems presented [here](https://projecteuler.net/).
 
 ## Requirements
-- node ^16.0.0
+- node ^18.12.0
 
-### To run: 
+### To run:
 -  `npm start`
 
 This will run _all_ solutions stored in this repo, comparing them using node's [perf_hook](https://nodejs.org/api/perf_hooks.html).
