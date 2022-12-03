@@ -4,8 +4,12 @@
   "description": "A deep dive into mathematics; different approaches and performances for Project Euler problems",
   "type": "module",
   "main": "index.js",
+  "engines": {
+    "node": "^18.12.0"
+  },
   "scripts": {
-    "start": "node index",
+    "start": "node bin/start",
+    "generate:readmes": "node bin/generateReadmes",
     "lint": "standard .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
